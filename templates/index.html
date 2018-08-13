@@ -1,10 +1,10 @@
 {% extends 'layout.html' %}
 {% block content %}
-<div class="entry-list"> 
+<div class="entry-list">
     {% for entry in entries %}
     <article>
         <h2>
-            <a href="{{ url_for('details/{}'.format(entry.id)) }}">{{entry.title}}</a>
+            <a href="{{ url_for('details', entry_id= entry.id) }}">{{entry.title}}</a>
         </h2>
         <time datetime="2016-01-31">{{entry.date}}</time>
     </article>
